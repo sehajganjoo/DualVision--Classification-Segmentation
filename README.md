@@ -107,7 +107,7 @@ cd DualVision--Classification-Segmentation
 pip install -r requirements.txt
 ```
 ---
-##Training & Experiments
+## Training & Experiments
 
 All training is performed in:
 notebooks/training_notebook.ipynb
@@ -120,7 +120,7 @@ Includes:
 
 ---
 
-##Inference
+## Inference
 
 Inference logic is implemented within the training notebook and reused for test predictions.
 ---
@@ -131,7 +131,7 @@ image_id, classification, segmentation_rle
 - Classification: space-separated class names
 - Segmentation: Run-Length Encoding (RLE)
 ---
-#Constraints Followed
+## Constraints Followed
 - Only ImageNet-pretrained backbones used
 - No pre-trained segmentation models
 - Custom architectures implemented
