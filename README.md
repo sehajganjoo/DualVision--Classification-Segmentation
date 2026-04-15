@@ -28,15 +28,42 @@ Each training sample includes:
 ---
 
 ## 🏗️ Project Structure
-classification/ # Multi-label classification model
-segmentation/ # Semantic segmentation model
-pca/ # PCA implementation (NumPy)
-utils/ # Metrics, losses, RLE encoding
-notebooks/ # Training + statistical analysis
-outputs/ # Logs, predictions, visualizations
-submission/ # Kaggle submission file
-report/ # Final report
-
+```
+23651_SEHAJ_ASSIGNMENT2/
+│
+├── classification/ # Multi-label classification model
+│ ├── model.py
+│ └── weights/
+│
+├── segmentation/ # Semantic segmentation model
+│ ├── model.py
+│ └── weights/
+│
+├── training_notebook.ipynb # Training pipeline + PCA (NumPy, Thin SVD)
+├── statistical_tests.ipynb # Wilcoxon test + Bootstrap CI
+│
+├── submission.csv # Final Kaggle submission
+├── report.pdf # Assignment report
+│
+├── requirements.txt # Dependencies
+├── README.md # Project documentation
+├── LICENSE
+│
+└── .qodo/ # Editor/system files (can be ignored)
+```
+Place this folder inside the Dataset as follows:
+```
+Dataset/
+├── train/
+│   ├── images/              # JPEG images (.jpg)
+│   ├── annotations/         # XML bounding-box annotations (.xml)
+│   ├── segmentation_masks/  # Semantic class masks (.png, palette-encoded)
+│   └── labels.csv           # Binary multilabel matrix
+├── test/
+│   └── images/              # JPEG test images (NO ground truth provided)
+├── 23651_SEHAJ_ASSIGNMENT2
+└── README.md
+```
 ---
 
 ## 🧠 Methodology
